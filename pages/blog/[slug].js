@@ -79,8 +79,8 @@ const PostPage = ({ frontMatter: { title }, mdxSource, tableOfContents }) => {
         <div className="flex flex-col sticky top-0 ml-10">
           <span className="text-lg font-bold mb-3 mt-6 font-inter text-custom-toc">DAFTAR ISI</span>
           <ul>
-            {tableOfContents.map((el) => (
-              <li className='pb-3 leading-none hover:text-black text-custom-toc font-inter'>
+            {tableOfContents.map((el, index) => (
+              <li key={index} className='pb-3 leading-none hover:text-black text-custom-toc font-inter'>
                 <Link passHref href={el["link"]} >
                   {el["title"]}
                 </Link>
