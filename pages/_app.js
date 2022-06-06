@@ -1,4 +1,3 @@
-import Document, { Html, Main, NextScript, Head } from "next/document";
 
 import "../styles/globals.css";
 import Nav from "./components/nav";
