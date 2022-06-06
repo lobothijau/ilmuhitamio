@@ -11,7 +11,7 @@ module.exports = {
       },
       colors: {
         'custom-title': '#031b4e',
-        'custom-sub-title': '#4d5b7c',
+        'custom-subtitle': '#021335',
         'custom-toc': '#5b6987',
       }
     },
