@@ -1,0 +1,77 @@
+---
+title: 'SolidJS: A Beginners Guide'
+date: 'September 11, 2021'
+description: "Here's an introduction to SolidJS"
+thumbnailUrl: "/solidjs-thumbnail.jpeg"
+tags: ['JavaScript', 'solidjs']
+---
+
+
+# Pengembangan Aplikasi C++
+
+Sebelum menulis dan mengeksekusi progam C++ pertama kita, mari pahami sedikit lebih dalam tentang bagaimana program C++ dikembangkan. Berikut gambar yang menjelaskan prosesnya secara sederhana:
+
+---
+
+## Step 1: Tentukan masalah yang akan diselesaikan
+
+Tahapan ini menjawab pertanyaan "apa", apa masalah yang perlu diselesaikan oleh program C++ yang akan dibuat. Menentukan masalah bisa menjadi langkah termudah, namun bisa juga menjadi langkah tersulit. Semua yang kita butuhkan di tahapan ini adalah ide yang menjadi dasar tahapan-tahapan selanjutnya. 
+
+Berikut beberapa contoh:
+ 
+- "Saya ingin menulis program yang bisa menerima banyak angka lalu menghitung nilai rata-ratanya."
+- "Saya ingin menulis program yang membuatkan labirin 2 dimensi sehingga pengguna bisa melaluinya. Pengguna akan menang bila mencapai akhir labirin tersebut."
+- "Saya ingin menulis program yang membaca file berisi harga saham lalu memprediksi apakah harga stock tersebut akan naik atau turun"
+
+---
+
+## Step 2: Menentukan bagaimana menyelesaikan masalah tersebut
+
+Tahap ini menjawab pertanyaan "bagaimana", bagaimana kita akan menyelesaikan masalah yang muncul di tahap 1. Tantangan di tahap 2 adalah banyaknya cara untuk menyelesaikan sebuah masalah, namun ada sebagian yang baik dan beberapa diantaranya tidak lebih baik. Kadang programmer akan mendapatkan solusi dari suatu masalah, duduk dan mulai menulis program. Terkadang solusi yang pertama kali terpikirkan masuk ke dalam kategori yang kurang baik. 
+
+Solusi yang baik pada umumnya memiliki karakteristik sebagai berikut:
+
+- Mudah (bukan mudah pengerjaannya tapi mudah alurnya)
+- Terdokumentasi dengan baik (terutama memiliki catatan akan asumsi dan batasan dari masalah tersebut)
+- Modular, artinya sebagian bisa di pakai ditempat lain atau bisa diubah tanpa merusak keseluruhan program
+- Memberikan pesan kesalahan yang jelas saat sesuatu yang tidak terduga terjadi. 
+
+Saat duduk dan mulai menulis program, pembaca mungkin ingin segera menyelesaikan program yang dipikirkan, sehingga pembaca akan memilih solusi yang paling cepat pengerjaannya. Hal tersebut bisa berakibat pada program yang rentan kesalahan, sulit untuk diperluas pengembangannya atau punya banyak **bugs**. 
+
+> Istilah bug pertama kali dipakai oleh Thomas Edison pada tahun 1870-an! Namun, istilah ini dipopulerkan pada tahun 1940-an saat *engineer* ngengat yang menyangkut di dalam perangkat komputer generasi awal, menyebabkan korsleting. *Log book* tempat error terjadi dan ngengatnya saat ini menjadi bagian dari Smithsonian Museum of American History dan bisa dilihat [di sini](https://americanhistory.si.edu/collections/search/object/nmah_334663).
+
+Penelitian menyebutkan bahwa hanya programmer menghabiskan waktu hanya 20% saat menulis program. Sisa 80% lagi dipakai untuk *maintenance* yang termasuk juga proses **debugging** (mencari/memperbaiki bug), menambahkan fitur baru (atau pengurangan fitur lama), menyesuaikan perubahan ekosistem (misalnya agar bisa dipakai di sistem operasi lain) atau peningkatan-peningkatan lainnya. 
+
+Oleh karena itu, penting bagi kita mempersiapkan waktu khusus sebelum mulai menulis program untuk memikirkan solusi terbaik agar program yang ditulis akan menyelamatkan kita dari masalah-masalah serius dimasa depan. 
+
+---
+
+## Step 3: Menulis Program
+
+
+Untuk menulis program kita akan butuh dua hal. Pertama adalah pengetahuan akan bahasa pemrograman yang akan ditulis (itulah gunanya tutorial ini!) dan yang kedua adalah *text editor* untuk menuliskan kode-kode progrma. Program yang akan kita tulis adalah instruksi dalam bahasa pemrograman C++ yang disebut **source code**. Kode yang ditulis boleh menggunakan editor manapun bahkan sesederhana aplikasi Notepad milik Windows atau vi/pico di Unix. Meskipun begitu, penulis sangat merekomendasikan editor yang memang didesain untuk menulis program (sering disebut **code editor**). TIdak apa-apa jika belum memilikinya. Kita akan pelajari bagaimana memasang *code editor* sebentar lagi. 
+
+Beberapa fitur dari code ditor yang dapat membantu menulis program adalah:
+
+1. Line numbering (nomor baris), berguna untuk membantu mencari blok kode tertentu. Misalnya, saat ada *compiler error*, akan ada beberapa pesan yang diikuti oleh keterangan baris kode. Tanpa editor yang menampilkan nomor baris, akan sulit mencari tahu baris 64 ada di bagian mana. 
+2. *Syntax highlighting and coloring*, berguna untuk mebagi-bagi bagian-bagian tertentu agar lebih mudah di identifikasi sebagai komponen yang berbeda. Berikut contoh program C++ dengan *line number* dan *syntax highlighting*. 
+
+```cpp
+#include <iostream>
+
+int main()
+{
+    std::cout << "Colored text!";
+    return 0;
+}
+```
+
+Contoh-contoh di website ini akan selalu menampilkan nomor baris dan *syantax highlighting* agar mudah diikuti. 
+
+3. Font yang mudah dibaca. Font *non-programming* sering memiliki angka 0 dan huruf O yang mirip atau antara angka 1 dan huruf l (L kecil) atau huruf I (i kecil). Font khusus programming dapat mempermudah pembacaan kode karena bisa membedakan simbol-simbol yang ada secara visual. Semua *code editor* biasanya akan mengaktifkan font jenis ini namun tidak bagi editor teks biasa. 
+
+Program yang ditulis akan memiliki nama `sesuatu.cpp` dimana `sesuatu` akan diganti dengan nama program yang diinginkan (misalnya kalkulator, tinggi-rendah, dsb.). Akhiran `.cpp` memberitahu *compiler* (dan kita sendiri tentunya) bahwa file ini berisi *source code* C++. Harap ingat beberapa orang menggunakan akhiran `.cc` dibandingkan `.cpp`, tapi penulis merekomendasikan penggunaan `.cpp`. 
+
+Ketahui juga bahwa program C++ yang kompleks bisa memiliki banyak file `.cpp`. Meskipun mayoritas program yang akan kita buat hanya terdiri dari satu file `.cpp`, memungkinkan bagi suatu program untuk memilki puluhan bahkan ratusan file `.cpp`. 
+
+Setelah program ditulis, langkah selanjutnya adalah mengubah *source code* menjadi sesuatu yang bisa dijalankan di komputer untuk melihat bahwa program ini bekerja! Akan kita diskusikan tahap 4-7 di bab selanjutnya. 
