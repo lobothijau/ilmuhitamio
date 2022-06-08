@@ -12,7 +12,7 @@ export default function Home({ posts }) {
   return (
     <div className="mx-auto w-6/12">
       {posts.map((post, index) => (
-        <div className="mb-10">
+        <div className="mb-10" key={index}>
           <div className="flex flex-row gap-1 mb-1">
             {post.frontMatter.tags.map((tag, index) => (
               <Link href={""} key={index}>
@@ -24,7 +24,7 @@ export default function Home({ posts }) {
               </Link>
             ))}
           </div>
-          <Link href={"/blog/" + post.slug} passHref key={index}>
+          <Link href={"/blog/" + post.slug} passHref>
             <a>
               <p className="font-inter font-bold text-custom-subtitle text-4xl">
                 {post.frontMatter.title}
