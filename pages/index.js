@@ -15,7 +15,7 @@ export default function Home({ posts }) {
         <div className="mb-10">
           <div className="flex flex-row gap-1 mb-1">
             {post.frontMatter.tags.map((tag, index) => (
-              <Link href={""}>
+              <Link href={""} key={index}>
                 <a onClick={() => alert('fitur belum tersedia')}>
                   <span className="bg-slate-200 text-custom-title hover:bg-slate-800 hover:text-slate-200 px-2 rounded-lg py-1">
                     {tag}
