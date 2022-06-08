@@ -7,6 +7,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import slugify from "slugify";
 import Link from "next/link";
 import rehypeSlug from "rehype-slug";
+import dayjs from "dayjs";
 
 export const getTableOfContents = async (content) => {
   const regexp = new RegExp(/^(### |## )(.*)\n/, "gm");
@@ -62,9 +63,12 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const mdxSource = await serialize(content, options);
   const tableOfContents = await getTableOfContents(content);
 
+  let dateString = '';
+  // const dateString = dayjs(frontMatter.date, 'DD-MM-YYYY HH:mm:ss')
   return {
     props: {
       frontMatter,
+      dateString,
       slug,
       mdxSource,
       tableOfContents,
