@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         'epilogue': ['Epilogue', 'sans-serif'],
         'inter': ['Inter', 'sans-serif'],
+        'jetbrains-mono': ['Jetbrains Mono', 'monospace']
       },
       colors: {
         'custom-title': '#031b4e',

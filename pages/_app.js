@@ -8,13 +8,13 @@ function MyApp({ Component, pageProps }) {
       <Nav />
       <Component {...pageProps} />
 
-      <footer>
+      <footer className="bg-blue-800 py-20 text-gray-200 text-center">
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://twitter.com/gusajisan"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Copyright
+          © 2022 Bagus Aji Santoso. Made with ❤️ from Cimahi.
         </a>
       </footer>
     </div>

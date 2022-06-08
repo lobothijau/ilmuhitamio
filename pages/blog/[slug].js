@@ -74,7 +74,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
 const PostPage = ({ frontMatter: { title }, mdxSource, tableOfContents }) => {
   return (
-    <div className="flex justify-center antialiased mt-20">
+    <div className="flex justify-center antialiased my-20">
       <aside className="hidden md:block md:w-80">
         <div className="flex flex-col sticky top-0 ml-10">
           <span className="text-lg font-bold mb-3 mt-6 font-inter text-custom-toc">DAFTAR ISI</span>
